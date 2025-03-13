@@ -113,9 +113,8 @@ const quotes = [
 ];
 
 function generateQuote() {
-    const quoteElement = document.getElementById("quote-text");
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    quoteElement.textContent = quotes[randomIndex];
+    document.getElementById("quote").textContent = quotes[Math.floor(Math.random() * quotes.length)];
 }
 
-document.addEventListener("DOMContentLoaded", generateQuote);
+generateQuote();
+
