@@ -112,9 +112,10 @@ const quotes = [
     "Believe you can and you’re halfway there."
 ];
 
-function generateQuote() {
-    document.getElementById("quote").textContent = quotes[Math.floor(Math.random() * quotes.length)];
+function getDailyQuote() {
+    const date = new Date();
+    const index = date.getDate() % quotes.length;
+    return quotes[index];
 }
 
-generateQuote();
-
+document.getElementById("quote").textContent = getDailyQuote();
